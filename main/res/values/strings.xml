@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">Course Q</string>
+    <string name="facebook_app_id">1228237620573143</string>
+    <string name="title_activity_login"></string>
+    <string name="simple_login"></string>
+
+    <!-- Headers -->
+    <string name="header_signin">Course Q</string>
+    <string name="header_signup">Build Your Profile</string>
+    <string name="header_add">Add A Class</string>
+    <string name="header_recommend">Recommend!</string>
+    <string name="header_review">Pick A Class</string>
+    <string name="header_compare">Pick Two Classes</string>
+    <string name="title_welcome">Weclome Back!</string>
+
+    <!-- Sign In -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="auth_failed">Oops! Your login could not be authenticated.</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_netid_not_found">Your NetId was not found. Please sign up.</string>
+
+    <string name="new_user">New User?</string>
+    <string name="action_sign_in">Sign in</string>
+
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <!-- Sign Up -->
+    <string name="already_registered">This netid is already registered. Please sign in.</string>
+    <string name="sign_up">Sign Up</string>
+
+    <string name="prompt_netid">Netid</string>
+    <string name="prompt_name">Full Name</string>
+    <string name="year_required">Please choose your graduation year.</string>
+    <string name="major_required">Please choose your major.</string>
+
+    <!-- Main Activity -->
+    <string name="title_inquiry">Choose an Action</string>
+    <string name="add_a_class">Add A Class</string>
+    <string name="review_a_class">Review A Class</string>
+    <string name="review">Review</string>
+
+    <!-- Add A Class -->
+    <string name="next">Next</string>
+    <string name="prompt_search">Search by ID (\'COS 226\')</string>
+    <string name="course_required">Please select a course.</string>
+
+    <!-- Add A Class2 -->
+    <string name="add">Add</string>
+    <string name="Q1">How prepared were you?</string>
+    <string name="Q2">Did you like it?</string>
+    <string name="Q3">How difficult was it?</string>
+    <string name="Q4">Was it useful?</string>
+    <string name="Q5">How well did you do?</string>
+    <string name="Q6">Year taken?</string>
+    <string name="rating_required">Please fill out each rating.</string>
+    <string name="yr_integer">Please provide an integer 1,2,3 or 4.</string>
+    <string name="sign_out">Sign Out</string>
+
+
+    <!-- Review2 -->
+    <string name="back_to_main">Back to Main</string>
+    <string name="rQ1">How prepared will you be?</string>
+    <string name="rQ2">Will you like it?</string>
+    <string name="rQ3">How difficult will it be?</string>
+    <string name="rQ4">Will it be useful?</string>
+    <string name="rQ5">How well will you do?</string>
+    <string name="rQ6">Average Year Taken</string>
+
+</resources>
