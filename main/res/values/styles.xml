@@ -8,4 +8,61 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="red" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/Red</item>
+        <item name="colorControlActivated">@color/Red</item>
+    </style>
+
+    <style name="green" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/Green</item>
+        <item name="colorControlActivated">@color/Green</item>
+    </style>
+
+    <style name="yellow" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/Yellow</item>
+        <item name="colorControlActivated">@color/Yellow</item>
+    </style>
+
+    <style name="rec2_list">
+            <item name="android:layout_width">wrap_content</item>
+            <item name="android:layout_height">50dp</item>
+            <item name="android:layout_gravity">center</item>
+            <item name="android:textSize">30dp</item>
+            <item name="android:textColor">@color/com_facebook_blue</item>
+    </style>
+
+    <style name="rec2_head">
+        <item name="android:textSize">25dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">#FF5599</item>
+    </style>
+
+    <style name="mytxtview">
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginTop">-15dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/com_facebook_blue</item>
+    </style>
+
+    <style name="myqview">
+        <item name="android:layout_marginLeft">25dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/question</item>
+        <item name="android:textSize">40dp</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:textColor">@color/com_facebook_blue</item>
+    </style>
+
+    <style name="ratingview">
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:isIndicator">true</item>
+        <item name="android:numStars">5</item>
+        <item name="android:stepSize">0.5</item>
+    </style>
+
 </resources>

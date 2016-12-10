@@ -1,0 +1,123 @@
+private float[][] computePrediction(ArrayList<ArrayList<String>> similar) {
+
+
+        float[][] result = new float[2][5];
+        //second row saves the strenth of the prediciton i.e. number of separate ratings that went into average
+
+        //for each of the 5 categories, average over available ratings from NN/major/supermajor histories
+        for (int i = 0; i < 5; i++) {
+            if (user_nn == null) {//consult majors
+
+                if(majors.size() == 0) {//consult supermajors
+
+                    if(supermajors.size() == 0) { //extract average
+
+                        float sum = 0.0f;
+                        float count = 0.0f;
+                        for (int j = 0; j < similar.get(i).size(); j++) {
+                            HashMap<String, Object> my_course = (HashMap<String, Object>) course_map.get(similar.get(i).get(j));
+                            if (!my_course.containsKey("average")) continue;
+                            else {
+                                ArrayList<String> average = (ArrayList<String>) my_course.get("average");
+                                sum += Float.parseFloat(average.get(i));
+                                count += 1.0f;
+                            }
+                        }
+                        if (count == 0.0f) {//no neighbor ratings could be found
+                            result[0][i] = -1.0f;
+                            result[1][i] = count;
+                        }
+                        else {
+                            result[0][i] = sum / count;
+                            result[1][i] = count;
+                        }
+                    }
+
+                    else {//consult supermajors
+
+                        float[] returned = getRatings(supermajors.keySet(), similar.get(i), i);
+
+                        if (returned[1] == 0.0f) { //no neighbor ratings could be found
+                            result[0][i] = -1.0f;
+                            result[1][i] = returned[1];
+                        }
+                        else {
+                            result[0][i] = returned[0] / returned[1]; // sum/count
+                            result[1][i] = returned[1];
+                        }
+                    }
+                }
+                else {//consult majors
+
+                    float[] returned = getRatings(majors.keySet(), similar.get(i), i);
+
+                    if (returned[1] == 0.0f) { //no neighbor ratings could be found
+                        result[0][i] = -1.0f;
+                        result[1][i] = returned[1];
+                    }
+                    else {
+                        result[0][i] = returned[0] / returned[1]; // sum/count
+                        result[1][i] = returned[1];
+                    }
+                }
+            }
+
+            else {// consult user NN's
+
+                HashMap<String, Float> sim_users = new HashMap<String, Float>();
+                HashMap<String, Float> diff_users = new HashMap<String, Float>();
+
+                //separate diff and sim NN's
+                for (String user_id : user_nn.keySet()) {
+                    ArrayList<String> similarity = (ArrayList<String>) user_nn.get(user_id);
+                    Float sim = Float.parseFloat(similarity.get(i));
+                    if (sim >= 0.7f) {
+                        sim_users.put(user_id, sim);
+                    }
+                    else {
+                        diff_users.put(user_id, sim);
+                    }
+                }
+
+                //THIS IMPlEMENATION DOES NOT DO WEIGHTED AVERAGE OF RATINGS BASED ON
+                //MAGNITUDE OF SIMILARITY SCORE , IT JUST DOES SIMPLE AVERAGE OF ALL SIM NN's / DIFF NN's
+
+                float[] returned = getRatings(sim_users.keySet(), similar.get(i), i);
+                float sim_sum = returned[0];
+                float sim_count = returned[1];
+
+                float[] returned2 = getRatings(diff_users.keySet(), similar.get(i), i);
+                float diff_sum = returned2[0];
+                float diff_count = returned2[1];
+
+                //Based on whether any opposite NNs took the class, or any sim ones did, or both
+                //for each case set current rating appropriately
+                if (sim_count == 0.0f) {
+
+                    if(diff_count == 0.0f) {
+                        result[0][i] = -1.0f;
+                        result[1][i] = 0.0f;
+                    }
+                    else {//do the opposite as diff NN's
+                        float diff_avg = diff_sum / diff_count;
+                        result[0][i] = 5.0f - diff_avg;
+                        result[1][i] = diff_count;
+                    }
+                } else {
+                    float sim_avg = sim_sum / sim_count;
+
+                    if (diff_count == 0.0f) { //do the same as sim NN's
+                        result[0][i] = sim_avg;
+                        result[1][i] = sim_count;
+                    }
+                    else { //do average of sim and (opp of diff)
+                        float diff_avg = diff_sum / diff_count;
+                        result[0][i] = (sim_avg + 5.0f - diff_avg) / 2.0f;
+                        result[1][i] = sim_count + diff_count; //number of ratings that went into avg
+                    }
+                }
+            }
+        }
+
+        return result;
+    }

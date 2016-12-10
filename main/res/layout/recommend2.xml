@@ -1,0 +1,112 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.courseq.example.courseq.Add_A_Class2">
+
+
+    <!-- Login progress -->
+
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/header_rec2"
+        android:gravity="center"
+        android:textColor="@color/com_facebook_blue"
+        android:textStyle="bold"
+        android:textSize="25dp"/>
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/return_view"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TextView android:id="@+id/course1"
+                style="@style/rec2_list" />
+
+            <TextView android:id="@+id/course2"
+                style="@style/rec2_list" />
+
+            <TextView android:id="@+id/course3"
+                style="@style/rec2_list" />
+
+            <TextView android:id="@+id/course4"
+                style="@style/rec2_list" />
+
+            <TextView android:id="@+id/course5"
+                style="@style/rec2_list" />
+
+            <TextView android:id="@+id/suggestion"
+                android:text="@string/suggest"
+                style="@style/rec2_head" />
+
+            <TextView android:id="@+id/suggestion2"
+                android:text="@string/suggest2"
+                style="@style/rec2_head" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/second_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:weightSum="1">
+        <Button
+            android:id="@+id/back_button"
+            style="?android:textAppearanceSmall"
+            android:layout_width="70dp"
+            android:background="@drawable/roundedbutton"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:text="@string/back_to_main"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/try_button"
+            style="?android:textAppearanceSmall"
+            android:layout_width="70dp"
+            android:background="@drawable/roundedbutton"
+            android:layout_height="60dp"
+            android:layout_marginLeft="40dp"
+            android:text="@string/try_again"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/sign_out_button"
+            style="?android:textAppearanceSmall"
+            android:layout_width="60dp"
+            android:background="@drawable/roundedbutton"
+            android:layout_height="50dp"
+            android:layout_marginLeft="40dp"
+            android:text="@string/sign_out"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</LinearLayout>

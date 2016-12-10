@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.jelanidenis.courseq">
+    package="com.jelanidenis.courseq">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -20,25 +20,37 @@
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
 
-        <activity android:name=".Add_A_Class">
+        <activity android:name="com.jelanidenis.courseq.Add_A_Class">
         </activity>
 
-        <activity android:name=".Add_A_Class2">
+        <activity android:name="com.jelanidenis.courseq.Add_A_Class2">
         </activity>
 
-        <activity android:name=".Review">
+        <activity android:name="com.jelanidenis.courseq.Review">
         </activity>
 
-        <activity android:name=".Review2">
+        <activity android:name="com.jelanidenis.courseq.Review2">
         </activity>
 
-        <activity android:name=".MainActivity">
+        <activity android:name="com.jelanidenis.courseq.Compare">
         </activity>
 
-        <activity android:name=".SimpleSignUp">
+        <activity android:name="com.jelanidenis.courseq.Compare2">
         </activity>
 
-        <activity android:name=".SimpleSignIn">
+        <activity android:name="com.jelanidenis.courseq.Recommend">
+        </activity>
+
+        <activity android:name="com.jelanidenis.courseq.Recommend2">
+        </activity>
+
+        <activity android:name="com.jelanidenis.courseq.MainActivity">
+        </activity>
+
+        <activity android:name="com.jelanidenis.courseq.SimpleSignUp">
+        </activity>
+
+        <activity android:name="com.jelanidenis.courseq.SimpleSignIn">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

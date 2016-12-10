@@ -8,14 +8,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.jelanidenis.courseq.SimpleSignIn">
+    tools:context="com.courseq.example.courseq.SimpleSignIn">
 
 
     <!-- Login progress -->
     <LinearLayout
         android:id="@+id/main_form"
         android:layout_width="299dp"
-        android:layout_height="316dp"
+        android:layout_height="490dp"
         android:orientation="vertical"
         android:weightSum="1">
 
@@ -23,7 +23,6 @@
         <TextView
             android:id="@+id/inquiry"
             android:layout_width="match_parent"
-            android:layout_marginTop="30dp"
             android:layout_height="wrap_content"
             android:text="@string/title_inquiry"
             android:gravity="center"
@@ -34,7 +33,7 @@
         <TextView
             android:id="@+id/add_title"
             android:layout_width="match_parent"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:layout_height="wrap_content"
             android:text="@string/add_a_class"
             android:gravity="center"
@@ -45,7 +44,7 @@
             style="?android:textAppearanceSmall"
             android:layout_width="100dp"
             android:gravity="center"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="10dp"
             android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:text="@string/add"
@@ -54,7 +53,7 @@
         <TextView
             android:id="@+id/review_title"
             android:layout_width="match_parent"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:layout_height="wrap_content"
             android:text="@string/review_a_class"
             android:gravity="center"
@@ -67,8 +66,48 @@
             android:gravity="center"
             android:layout_gravity="center"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="10dp"
             android:text="@string/review"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/compare_title"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:text="@string/compare_title"
+            android:gravity="center"
+            android:textSize="18dp"/>
+
+        <Button
+            android:id="@+id/compare_button"
+            style="?android:textAppearanceSmall"
+            android:layout_width="100dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/compare"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/recommend_title"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:text="@string/recommend_title"
+            android:gravity="center"
+            android:textSize="18dp"/>
+
+        <Button
+            android:id="@+id/recommend_button"
+            style="?android:textAppearanceSmall"
+            android:layout_width="100dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/recommend"
             android:textStyle="bold" />
 
     </LinearLayout>
