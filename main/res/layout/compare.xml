@@ -14,7 +14,7 @@
         android:id="@+id/banner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/header_add"
+        android:text="@string/header_compare"
         android:gravity="center"
         android:textColor="@color/com_facebook_blue"
         android:textStyle="bold"
@@ -35,7 +35,7 @@
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/search"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:gravity="center"
                 android:textSize="18dp"
                 android:hint="@string/prompt_search"
@@ -53,7 +53,37 @@
             <ListView
                 android:id="@+id/search_list"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="110dp"
+                android:gravity="center">
+            </ListView>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/search2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:hint="@string/prompt_search"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="@string/action_sign_in"
+                android:imeOptions="actionUnspecified"
+                android:inputType="text"
+                android:maxLines="1" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ListView
+                android:id="@+id/search_list2"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
                 android:gravity="center">
             </ListView>
         </android.support.design.widget.TextInputLayout>
@@ -89,20 +119,20 @@
         <Button
             android:id="@+id/back_button"
             style="?android:textAppearanceSmall"
-            android:layout_width="70dp"
+            android:layout_width="wrap_content"
             android:background="@drawable/roundedbutton"
             android:layout_height="40dp"
-            android:layout_marginLeft="45dp"
+            android:layout_marginLeft="20dp"
             android:text="@string/back_to_main"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/sign_out_button"
             style="?android:textAppearanceSmall"
-            android:layout_width="60dp"
+            android:layout_width="90dp"
             android:background="@drawable/roundedbutton"
             android:layout_height="40dp"
-            android:layout_marginLeft="130dp"
+            android:layout_marginLeft="120dp"
             android:text="@string/sign_out"
             android:textStyle="bold" />
     </LinearLayout>

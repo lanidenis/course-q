@@ -1,0 +1,80 @@
+                    /*
+                    //sort candidates by strength to find median threshold
+                    Double strength_median;
+                    Double similarity_threshold = 0.6;
+
+                    HashMap<String, Double> strengths = new HashMap<>();
+                    //HashMap<String, Double> similarities = new HashMap<>();
+
+                    for (String neighbor : newbies.keySet()) {
+                        ArrayList<String> store = (ArrayList<String>) newbies.get(neighbor);
+                        strengths.put(neighbor, Double.parseDouble(store.get(1)));
+                        //similarities.put(neighbor, Double.parseDouble(store.get(0)));
+                        Log.i(TAG, "put one in");
+                    }
+
+                    //Log.i(TAG, "" + strengths.size());
+
+                    //find strength threshold aka median
+                    Collection<Double> str_solo = strengths.values();
+
+                    //Log.i(TAG, "" + str_solo.size());
+
+                    Double[] arg_array = new Double[]{};
+                    Double[] str_array = str_solo.toArray(arg_array);
+                    Arrays.sort(str_array);
+
+                    if (str_array.length % 2 == 0) {
+                        int high = str_array.length / 2;
+                        int low = high - 1;
+                        strength_median = (str_array[high] + str_array[low]) / 2.0;
+                    } else {
+                        int mid = str_array.length / 2;
+                        strength_median = str_array[mid];
+                    }
+
+                    //find and categorize candidates as above(reliable) or below(less reliable)
+                    HashMap<String, Object> aboveUpdates = new HashMap<>();
+                    HashMap<String, Object> belowUpdates = new HashMap<>();
+                    ArrayList<String> store;
+
+                    for (String neighbor : newbies.keySet()) {
+                        store = (ArrayList<String>) newbies.get(neighbor);
+                        if (Double.parseDouble(store.get(0)) >= similarity_threshold) {
+                            if (Double.parseDouble(store.get(1)) >= strength_median) {
+
+                                //safe delete from both users' below section (since sim is moving up)
+                                rDatabase.child("users").child(neighbor).child("neighbors")
+                                        .child("below").child(netid).setValue(null);
+
+                                belowUpdates.put("/users/" + netid + "/neighbors/below/" + neighbor, null);
+
+                                //add to both users' above section of NN list
+                                rDatabase.child("users").child(neighbor).child("neighbors")
+                                        .child("above").child(netid).setValue(store);
+
+                                aboveUpdates.put("/users/" + netid + "/neighbors/above/" + neighbor, store);
+
+                            } else {
+
+                                //safe delete from both users' above section (since sim is moving down)
+                                rDatabase.child("users").child(neighbor).child("neighbors")
+                                        .child("above").child(netid).setValue(null);
+
+                                aboveUpdates.put("/users/" + netid + "/neighbors/above/" + neighbor, null);
+
+                                //add to both user's below section of NN list
+                                rDatabase.child("users").child(neighbor).child("neighbors")
+                                        .child("below").child(netid).setValue(store);
+
+                                belowUpdates.put("/users/" + netid + "/neighbors/below/" + neighbor, store);
+
+                            }
+                        }
+                    }
+
+                    //update nearest neighbors for netid of interest
+                    rDatabase.updateChildren(aboveUpdates);
+                    rDatabase.updateChildren(belowUpdates);
+
+                    */

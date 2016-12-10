@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.jelanidenis.courseq.Add_A_Class">
+    tools:context="com.courseq.example.courseq.Add_A_Class">
 
     <TextView
         android:id="@+id/banner"
@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <EditText
+            <android.support.design.widget.TextInputEditText
                 android:id="@+id/search"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -63,27 +63,46 @@
     <LinearLayout
         android:id="@+id/second_layout"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         android:orientation="horizontal"
         android:weightSum="1">
+
         <Button
             android:id="@+id/next_button"
             style="?android:textAppearanceSmall"
             android:layout_width="100dp"
-            android:layout_marginLeft="115dp"
+            android:layout_marginLeft="125dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="0dp"
             android:text="@string/next"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/third_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/back_button"
+            style="?android:textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:background="@drawable/roundedbutton"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:text="@string/back_to_main"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/sign_out_button"
             style="?android:textAppearanceSmall"
-            android:layout_width="50dp"
+            android:layout_width="90dp"
             android:background="@drawable/roundedbutton"
             android:layout_height="40dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginLeft="60dp"
+            android:layout_marginLeft="120dp"
             android:text="@string/sign_out"
             android:textStyle="bold" />
     </LinearLayout>

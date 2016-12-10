@@ -11,6 +11,8 @@
     <string name="header_recommend">Recommend!</string>
     <string name="header_review">Pick A Class</string>
     <string name="header_compare">Pick Two Classes</string>
+    <string name="header_rec">Show Me Classes That I Will</string>
+    <string name="header_rec2">These are the best matches.</string>
     <string name="title_welcome">Weclome Back!</string>
 
     <!-- Sign In -->
@@ -33,8 +35,11 @@
     <!-- Sign Up -->
     <string name="already_registered">This netid is already registered. Please sign in.</string>
     <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign In</string>
 
     <string name="prompt_netid">Netid</string>
+    <string name="grad_year">Graduation Year</string>
+    <string name="prompt_major">Search For Your Major</string>
     <string name="prompt_name">Full Name</string>
     <string name="year_required">Please choose your graduation year.</string>
     <string name="major_required">Please choose your major.</string>
@@ -43,7 +48,11 @@
     <string name="title_inquiry">Choose an Action</string>
     <string name="add_a_class">Add A Class</string>
     <string name="review_a_class">Review A Class</string>
+    <string name="compare_title">Compare Classes</string>
+    <string name="recommend_title">Get a Recommendation</string>
+    <string name="compare">Compare</string>
     <string name="review">Review</string>
+    <string name="recommend">Get</string>
 
     <!-- Add A Class -->
     <string name="next">Next</string>
@@ -62,7 +71,6 @@
     <string name="yr_integer">Please provide an integer 1,2,3 or 4.</string>
     <string name="sign_out">Sign Out</string>
 
-
     <!-- Review2 -->
     <string name="back_to_main">Back to Main</string>
     <string name="rQ1">How prepared will you be?</string>
@@ -71,5 +79,14 @@
     <string name="rQ4">Will it be useful?</string>
     <string name="rQ5">How well will you do?</string>
     <string name="rQ6">Average Year Taken</string>
+
+    <!-- Recommend2 -->
+    <string name="suggest">Tweak your search</string>
+    <string name="suggest2">for different results</string>
+    <string name="try_again">Try Again</string>
+
+    <!-- Compare 2 -->
+    <string name="question">\?   \?   \?   \?   \?</string>
+
 
 </resources>
